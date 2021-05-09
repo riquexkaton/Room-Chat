@@ -1,0 +1,224 @@
+
+.home-container
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color1);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.wave
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    filter: drop-shadow(-2px 0px 10px rgba(0,0,0,0.2));
+}
+.circle
+{
+    position: absolute;
+    bottom: -30%;
+    left: 60%;
+    right: 0;
+    margin: auto;
+    width: 10rem;
+    height: 10rem;
+    background-color: var(--color5);
+    z-index: -4;
+    border-radius: 50%;
+}
+.home-container .presentation
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.home-container .presentation h2
+{
+    font-size: 3rem;
+    align-self: flex-start;
+    color: var(--color3);
+    transform-origin:left;
+}
+
+.home-container .presentation h1{
+    font-size: 3rem;
+    color: var(--color2);
+    align-self: flex-end;
+    line-height: 1rem;
+    transform-origin:left;
+}
+
+.home-container form
+{
+    margin: 2rem auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+.home-container form .item
+{
+    margin: 0.1875rem;
+}
+.home-container form input[type="file"]
+{
+    display: none;
+}
+.home-container form .logo
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.5rem;
+    color: var(--color4);
+    font-weight: bold;
+}
+.home-container form label[for="photo"]
+{
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color1);
+    font-size: 2rem;
+    font-weight: 700;
+    filter: drop-shadow(0.125rem 0.125rem 0.625rem rgba(0,0,0,0.2));
+}
+
+.home-container form input[type="text"]
+{
+    font-size: 3rem;
+    text-align: center;
+    width: 15rem;
+    background-color: transparent;
+    color: var(--color2);
+    border: none;
+    outline: none;
+    border-bottom: 0.25rem solid var(--color2);
+}
+
+.home-container form button
+{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color2);
+    color: var(--color1);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    filter: drop-shadow(0.125rem 0.125rem 0.625rem rgba(0,0,0,0.3));
+}
+
+.charge
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 2%, 12%, 0.315);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+.error
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 2%, 12%, 0.315);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+}
+.charge .message-charge
+{
+    width: 17rem;
+    padding: 1.5rem;
+    word-wrap: break-word;
+    border-radius: 1.25rem;
+    flex-direction: column;
+    background-color: var(--color4);
+    color: var(--color3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error .message-error
+{
+    width: 17rem;
+    padding: 1.5rem;
+    word-wrap: break-word;
+    border-radius: 1.25rem;
+    flex-direction: column;
+    background-color: var(--color4);
+    color: var(--color3);
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.charge .message-charge p{
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.error .message-error p{
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+@media (min-width:700px)
+{
+    html{
+        font-size: 25px;
+    }
+    .home-container .presentation h2
+    {
+        font-size: 5rem;
+    }
+    .home-container .presentation h1
+    {
+        font-size: 5rem;
+    }
+    .home-container .circle
+    {
+    position: absolute;
+    bottom: -30%;
+    left: 60%;
+    right: 0;
+    margin: auto;
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--color5);
+    z-index: -2;
+    border-radius: 50%;
+    }
+}
+
+@media (max-width:300px)
+{
+    html{
+        font-size: 12px;
+    }
+}
